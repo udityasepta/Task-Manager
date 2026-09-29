@@ -5,8 +5,6 @@ A simple and modern **Task Manager web application** built using **HTML, CSS, an
 The application allows users to create, complete, delete, and filter tasks. Tasks are stored in the browser using **Local Storage**, so they remain available even after refreshing the page.
 
 
-Project Link ->  https://31t4fm7q-5500.inc1.devtunnels.ms/
-
 ## Features
 
 * Add new tasks
