@@ -1,0 +1,346 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f6f7f9;
+    color: #171717;
+}
+
+button,
+input {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+}
+
+
+/* Main */
+
+.app {
+    min-height: 100vh;
+    padding: 60px 20px;
+}
+
+.container {
+    max-width: 720px;
+    margin: auto;
+}
+
+
+/* Header */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 30px;
+}
+
+.label {
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    color: #777;
+    margin-bottom: 8px;
+}
+
+h1 {
+    font-size: 34px;
+    letter-spacing: -1px;
+    margin-bottom: 6px;
+}
+
+.subtitle {
+    color: #777;
+    font-size: 14px;
+}
+
+
+/* Counter */
+
+.counter {
+    width: 65px;
+    height: 65px;
+
+    background: white;
+    border: 1px solid #e8e8e8;
+    border-radius: 16px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.counter strong {
+    font-size: 20px;
+}
+
+.counter span {
+    font-size: 11px;
+    color: #888;
+}
+
+
+/* Add task */
+
+.add-box {
+    display: flex;
+    gap: 10px;
+
+    background: white;
+    padding: 8px;
+
+    border: 1px solid #e8e8e8;
+    border-radius: 14px;
+
+    margin-bottom: 25px;
+}
+
+.add-box input {
+    flex: 1;
+
+    border: none;
+    outline: none;
+
+    padding: 13px 14px;
+}
+
+.add-box input::placeholder {
+    color: #aaa;
+}
+
+.add-box button {
+    background: #171717;
+    color: white;
+
+    padding: 0 20px;
+
+    border-radius: 9px;
+
+    font-weight: 600;
+}
+
+.add-box button:hover {
+    background: #333;
+}
+
+
+/* Toolbar */
+
+.toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 12px;
+}
+
+.filters {
+    display: flex;
+    gap: 5px;
+}
+
+.filter {
+    background: transparent;
+    color: #777;
+
+    padding: 8px 12px;
+
+    border-radius: 7px;
+
+    font-size: 13px;
+}
+
+.filter.active {
+    background: #e9eaec;
+    color: #171717;
+    font-weight: 600;
+}
+
+#totalCount {
+    color: #999;
+    font-size: 13px;
+}
+
+
+/* Task */
+
+.task-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.task {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+
+    background: white;
+
+    border: 1px solid #e8e8e8;
+    border-radius: 12px;
+
+    padding: 15px;
+
+    transition: 0.2s;
+}
+
+.task:hover {
+    border-color: #ccc;
+    transform: translateY(-1px);
+}
+
+
+/* Checkbox */
+
+.check {
+    width: 21px;
+    height: 21px;
+
+    border: 1.5px solid #ccc;
+    border-radius: 50%;
+
+    background: white;
+
+    color: white;
+    font-size: 12px;
+
+    flex-shrink: 0;
+}
+
+.task.completed .check {
+    background: #171717;
+    border-color: #171717;
+}
+
+
+/* Task title */
+
+.task-title {
+    flex: 1;
+    font-size: 14px;
+}
+
+.task.completed .task-title {
+    text-decoration: line-through;
+    color: #999;
+}
+
+
+/* Delete */
+
+.delete {
+    background: transparent;
+    color: #aaa;
+
+    font-size: 22px;
+}
+
+.delete:hover {
+    color: #171717;
+}
+
+
+/* Empty */
+
+.empty {
+    text-align: center;
+
+    background: white;
+
+    border: 1px dashed #ddd;
+    border-radius: 14px;
+
+    padding: 50px 20px;
+}
+
+.empty-icon {
+    width: 45px;
+    height: 45px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: auto;
+    margin-bottom: 15px;
+
+    border-radius: 50%;
+
+    background: #f1f1f1;
+    color: #777;
+}
+
+.empty h3 {
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+
+.empty p {
+    font-size: 13px;
+    color: #999;
+}
+
+
+/* Footer */
+
+footer {
+    display: flex;
+    justify-content: space-between;
+
+    margin-top: 15px;
+
+    color: #999;
+    font-size: 12px;
+}
+
+footer button {
+    background: transparent;
+    color: #777;
+}
+
+footer button:hover {
+    color: #171717;
+}
+
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    .app {
+        padding: 35px 15px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    .counter {
+        width: 55px;
+        height: 55px;
+    }
+
+    .add-box {
+        flex-direction: column;
+    }
+
+    .add-box button {
+        padding: 12px;
+    }
+
+    .toolbar {
+        align-items: flex-end;
+    }
+}
+

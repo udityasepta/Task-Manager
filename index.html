@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Task Manager</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="app">
+
+        <div class="container">
+
+            <!-- Header -->
+            <header>
+                <div>
+                    <p class="label">MY WORKSPACE</p>
+                    <h1>Task Manager</h1>
+                    <p class="subtitle">
+                        Keep your work organized and focused.
+                    </p>
+                </div>
+
+                <div class="counter">
+                    <strong id="activeCount">0</strong>
+                    <span>active</span>
+                </div>
+            </header>
+
+
+            <!-- Add Task -->
+            <div class="add-box">
+
+                <input
+                    type="text"
+                    id="taskInput"
+                    placeholder="What needs to be done?"
+                >
+
+                <button id="addBtn">
+                    Add Task
+                </button>
+
+            </div>
+
+
+            <!-- Filters -->
+            <div class="toolbar">
+
+                <div class="filters">
+
+                    <button class="filter active" data-filter="all">
+                        All
+                    </button>
+
+                    <button class="filter" data-filter="active">
+                        Active
+                    </button>
+
+                    <button class="filter" data-filter="completed">
+                        Completed
+                    </button>
+
+                </div>
+
+                <span id="totalCount">
+                    0 tasks
+                </span>
+
+            </div>
+
+
+            <!-- Task List -->
+            <div id="taskList" class="task-list">
+
+                <div class="empty">
+
+                    <div class="empty-icon">
+                        ✓
+                    </div>
+
+                    <h3>No tasks here</h3>
+
+                    <p>
+                        Add a task to get started.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- Footer -->
+            <footer>
+
+                <span id="remainingCount">
+                    0 tasks remaining
+                </span>
+
+                <button id="clearCompleted">
+                    Clear completed
+                </button>
+
+            </footer>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
+
