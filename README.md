@@ -179,7 +179,7 @@ The main goal of this project is to practice **HTML, CSS, and JavaScript fundame
 
 **Your Name**
 
-GitHub: `https://github.com/your-username`
+GitHub: `https://github.com/udityasepta`
 
 ---
 
